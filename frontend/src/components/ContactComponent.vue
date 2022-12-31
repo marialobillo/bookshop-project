@@ -1,0 +1,1 @@
+<template><p>contact component</p></template>

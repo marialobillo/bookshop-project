@@ -1,0 +1,1 @@
+<template><p>purchase component</p></template>
