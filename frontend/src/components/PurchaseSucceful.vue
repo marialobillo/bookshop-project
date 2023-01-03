@@ -1,0 +1,1 @@
+<template><p>purchase successful component</p></template>
