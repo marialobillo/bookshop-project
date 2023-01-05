@@ -1,4 +1,5 @@
 <!-- eslint-disable prettier/prettier -->
+
 <template>
 <p>Purchase component</p>
 <div class="">
@@ -23,5 +24,8 @@
     </ul>
     <div class="">pagination next prev</div>
 </div>
-
+<FooterCommponent></FooterCommponent>
 </template>
+<script setup>
+import FooterCommponent from '../components/FooterCommponent.vue'
+</script>

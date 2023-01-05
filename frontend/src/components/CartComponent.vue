@@ -1,20 +1,28 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
-<p>cartcomponent</p>
+<h3>Cart</h3>
+
 <div class="">
     <div class="">cart</div>
     <div class="">cart logo</div>
     <hr>
 </div>
-<div class="">
-    <li>dynamic-name <img src="" alt="">total-cash<button>add</button><button>remove</button>
-        <hr>
+<ul>
+    <li v-for="item in items" :key="item.id">
+        {{ item.name }} - {{ item.price }}
+        <button @click="removeItem(item)">Remove</button>
+
     </li>
-</div>
+</ul>
+
 <div class="">
-    TOTAL:<br>
-    TOTAL VAT:<br>
+    <p>TOTAL:{{ total }}<br></p>
+    TOTAL VAT:{{ total-vat}}<br>
     TOTAL DEDUCTION:<br>
+    <button @click="checkout">Checkout</button>
 
 </div>
+
+
 </template>
+
