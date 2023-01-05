@@ -1,12 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
   <header>
     <img
-      alt="Vue logo"
+      alt="logo here"
       class="logo"
       src="@/assets/logo.svg"
       width="125"
@@ -14,11 +13,16 @@ import HelloWorld from "./components/HelloWorld.vue";
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+      <div class="upper">
+        <RouterLink to="/LoginComponent">Login</RouterLink>
+        <RouterLink to="/RegisterComponent">Register</RouterLink>
+      </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/AuthorComponent">Author</RouterLink>
+        <RouterLink to="/PublishersComponent">publishers</RouterLink>
+        <RouterLink to="/ContactComponent">contact</RouterLink>
+        <RouterLink to="/CartComponent">cart</RouterLink>
       </nav>
     </div>
   </header>
@@ -86,6 +90,15 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+  .upper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+    text-align: end;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+    gap: 3rem;
   }
 }
 </style>

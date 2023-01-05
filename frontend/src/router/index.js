@@ -10,12 +10,52 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/AuthorComponent",
+      name: "AuthorComponent",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      component: () => import("../components/AuthorComponent.vue"),
+    },
+    {
+      path: "/PublishersComponent",
+      name: "PublishersComponent",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/PublishersComponent.vue"),
+    },
+    {
+      path: "/ContactComponent",
+      name: "ContactComponent",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/ContactComponent.vue"),
+    },
+    {
+      path: "/CartComponent",
+      name: "CartComponent",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/CartComponent.vue"),
+    },
+    {
+      path: "/RegisterComponent",
+      name: "RegisterComponent",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/RegisterComponent.vue"),
+    },
+    {
+      path: "/LoginComponent",
+      name: "LoginComponent",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../components/LoginComponent.vue"),
     },
   ],
 });
