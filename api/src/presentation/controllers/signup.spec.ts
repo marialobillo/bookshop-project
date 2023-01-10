@@ -5,12 +5,29 @@ import {
   ServerError } from '../errors/'
 import { EmailValidator } from '../protocols/email-validator'
 
-
-
 interface SutTypes {
   sut: SignUpController
   emailValidatorStub: EmailValidator
 }
+
+const makeEmailValidator = (): EmailValidator => {
+	class EmailValidatorStub implements EmailValidator {
+    isValid (email: string): boolean {
+      return true           
+    }
+  }
+	return new EmailValidatorStub()
+}
+
+const makeEmailValidatorWithError = (): any => {
+	const emailValidatorStub = makeEmailValidator() 
+  const sut = new SignUpController(emailValidatorStub)
+  return {
+    sut,
+    emailValidatorStub
+  }
+}
+
 
 const makeSut = (): SutTypes => {
   class EmailValidatorStub implements EmailValidator {
@@ -104,12 +121,8 @@ describe('SignUpController', () => {
   })
 
   test('Should call EmailValidator with correct email', () => {
-    class EmailValidatorStub implements EmailValidator {
-      isValid (email: string): boolean {
-        throw new Error()              
-      }
-    }
-    const emailValidatorStub = new EmailValidatorStub()
+    
+    const emailValidatorStub = makeEmailValidatorWithError()
     const sut = new SignUpController(emailValidatorStub)
     const httpRequest = {
       body: {
