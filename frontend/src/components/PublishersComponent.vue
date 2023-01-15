@@ -1,31 +1,29 @@
 <!-- eslint-disable prettier/prettier -->
 
 <template>
-<p>Purchase component</p>
-<div class="">
-    pagination
-</div>
-<div class="">most popular author</div>
-<div class="">
+
+  <div class="">
+    <section>
+      <SearchbarComponent />
+    </section>
+  </div>
+  <p>||best selling publishers||</p>
+  <div>
     <ul>
-        <li>book 1<img src=""></li>
-        <li>book 2<img src=""></li>
-        <li>book 3<img src=""></li>
+      <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
-    <div class="">pagination next prev</div>
-</div>
-<div class="">pagination next prev</div>
-<div class="">best selling</div>
-<div class="">
+    <button @click="toggleSlideshow">Toggle Slideshow</button>
+  </div>
+  <P>||most popular publishers|||</P>
+  <div>
     <ul>
-        <li>book 1<img src=""></li>
-        <li>book 2<img src=""></li>
-        <li>book 3<img src=""></li>
+      <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
-    <div class="">pagination next prev</div>
-</div>
-<FooterCommponent></FooterCommponent>
+    <button @click="toggleSlideshow">Toggle Slideshow</button>
+  </div>
+  <FooterCommponent />
 </template>
 <script setup>
-import FooterCommponent from '../components/FooterCommponent.vue'
+import FooterCommponent from "../components/FooterCommponent.vue";
+import SearchbarComponent from "../components/SearchbarComponent.vue";
 </script>

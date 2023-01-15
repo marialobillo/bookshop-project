@@ -3,15 +3,17 @@
 <template>
 <div class="login-container">
     <form>
-        <div class="username"><label for="username">username</label></div>
+        <div class="username"><label for="username">Email</label></div>
         <div class=""><input type="text" placeholder="username" class=""></div>
         <div class="password"><label for="password">password</label></div>
         <div class=""><input type="password" placeholder="password" class=""></div>
         
         <div class=""><input type="submit"></div>
+        <p><a href="">forgot password</a></p>
         <p class="error-message"></p>
     </form>
 </div>
+<FootComponent />
 </template>
 <style scoped>
 /* Use a grid-based layout */
@@ -29,12 +31,11 @@
   }
 }
 
-
-
 /* Style the form container */
 form {
   width: 350px;
   margin: 0 auto;
+  margin-top: 12%;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 20px;
@@ -86,7 +87,7 @@ button {
 /* Style the hover state */
 button:hover {
   background-color: #0075c9;
-}  
+}
 /* Style the disabled state */
 /* Style the label */
 label[for="username"] {
@@ -100,7 +101,7 @@ label[for="username"] {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
   padding: 12px;
   text-transform: uppercase;
   box-sizing: border-box;
@@ -123,3 +124,5 @@ label[for="password"] {
   font-size: 14px;
 }
 </style>
+<script setup>
+import FootComponent from "../components/FootComponent.vue";</script>
