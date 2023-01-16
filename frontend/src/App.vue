@@ -14,19 +14,18 @@ import { RouterLink, RouterView } from "vue-router";
 
     <div class="wrapper">
       <div class="upper">
-        <RouterLink to="/LoginComponent">Login</RouterLink>
+        <RouterLink to="/LoginComponent">Login</RouterLink> &nbsp;
         <RouterLink to="/RegisterComponent">Register</RouterLink>
       </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/AuthorComponent">Author</RouterLink>
-        <RouterLink to="/PublishersComponent">publishers</RouterLink>
-        <RouterLink to="/ContactComponent">contact</RouterLink>
-        <RouterLink to="/CartComponent">cart</RouterLink>
+        <RouterLink to="/PublishersComponent">Publishers</RouterLink>
+        <RouterLink to="/ContactComponent">Contact</RouterLink>
+        <RouterLink to="/CartComponent">Cart</RouterLink>
       </nav>
     </div>
   </header>
-
   <RouterView />
 </template>
 
@@ -43,7 +42,7 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   margin-top: 2rem;
 }
