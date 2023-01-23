@@ -28,15 +28,22 @@
 </div>
 </footer>
 </template>
-<style>
+<style scoped>
 footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  margin-top: 20%;
+  margin-bottom: 0%;
   background-color: #333;
   color: white;
   padding: 20px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+
 }
 
 footer ul {

@@ -33,4 +33,11 @@ npm run build
 ```sh
 npm run lint
 ```
-//dynamic anchor
+### run test on components
+```sh
+npx jest
+```
+### run test on individual file
+```sh
+npx jest path/to/individual.spec.js
+```

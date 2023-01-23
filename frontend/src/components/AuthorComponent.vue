@@ -11,14 +11,14 @@ import SearchbarComponent from "../components/SearchbarComponent.vue";
     </section>
   </div>
   <p>||best selling authors||</p>
-  <div>
+  <div class="">
     <ul>
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
     <button @click="toggleSlideshow">Toggle Slideshow</button>
   </div>
   <P>||most popular authors|||</P>
-  <div>
+  <div class="author">
     <ul>
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
@@ -26,3 +26,8 @@ import SearchbarComponent from "../components/SearchbarComponent.vue";
   </div>
   <FooterCommponent />
 </template>
+<style scoped>
+#author{
+  margin-top: 20%;
+  margin-bottom: 20%;
+}</style>

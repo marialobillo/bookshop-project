@@ -9,7 +9,7 @@ import FooterCommponent from "../components/FooterCommponent.vue";
   <div class="">
     <div class="">cart</div>
     <div class="">cart logo</div>
-    <hr />
+    <hr /
   </div>
   <ul>
     <li v-for="item in items" :key="item.id">

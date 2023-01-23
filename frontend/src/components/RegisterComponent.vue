@@ -19,7 +19,7 @@
 
 </form>
 </div>
-<FootComponent />
+
 
 </template>
 <style>

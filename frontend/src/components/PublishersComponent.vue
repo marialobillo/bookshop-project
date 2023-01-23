@@ -14,7 +14,7 @@
     </ul>
     <button @click="toggleSlideshow">Toggle Slideshow</button>
   </div>
-  <P>||most popular publishers|||</P>
+  <P>most popular publishers</P>
   <div>
     <ul>
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
@@ -27,3 +27,8 @@
 import FooterCommponent from "../components/FooterCommponent.vue";
 import SearchbarComponent from "../components/SearchbarComponent.vue";
 </script>
+<style scoped>
+p{
+  margin-top: 20%;
+  margin-bottom: 20%;
+}</style>
