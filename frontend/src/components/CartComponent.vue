@@ -2,6 +2,21 @@
 
 <script>
 import FooterCommponent from "../components/FooterCommponent.vue";
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    purchaseForm() {
+      // Send the form data to the server or display a thank you message
+      alert(`Thank you ${this.email} purchase message`);
+    },
+   
+  },
+};
 </script>
 <template>
   <h3>Cart</h3>
@@ -9,7 +24,7 @@ import FooterCommponent from "../components/FooterCommponent.vue";
   <div class="">
     <div class="">cart</div>
     <div class="">cart logo</div>
-    <hr /
+    <hr />
   </div>
   <ul>
     <li v-for="item in items" :key="item.id">
@@ -22,8 +37,14 @@ import FooterCommponent from "../components/FooterCommponent.vue";
     <p>TOTAL:{{ total }}<br /></p>
     TOTAL VAT:{{ total - vat }}<br />
     TOTAL DEDUCTION:<br />
-    <button @click="checkout">Checkout</button>
+    <button @click.prevent="purchaseForm">Checkout</button>
   </div>
 
   <FooterCommponent />
 </template>
+<style>
+button{
+  color: rgb(26, 24, 27);
+  background-color: blue;
+}
+</style>

@@ -1,26 +1,41 @@
 <!-- eslint-disable prettier/prettier -->
+<script>
+export default {
+  data() {
+    return {
+      pronoun:"",
+      name: "",
+      email: "",
+      phonenumber: "",
+      Password: "",
+      confirmPassword: "",
+    };
+  },
+  methods: {
+    registerForm() {
+      // Send the form data to the server or display a thank you message
+      alert(`Thank you ${this.name}, your details ${this.pronoun} ${this.name}${this.email} ${this.phonenumber} ${this.Password} ${this.confirmPassword} has been registered successfully !`);
+    },
+  },
+};</script>
 <template>
-
-<div class="">
-<form>
-    <label for="">Pronoun</label>
-    <input type="text" >
-    <label for="">Name</label>
-    <input type="text" >
-    <label for="">Email</label>
-    <input type="text" >
-    <label for="">Phone number</label>
-    <input type="text" >
-    <label for="">Password</label>
-    <input type="password">
-    <label for="">Confirm password</label>
-    <input type="password">
-    <input type="submit">
-
-</form>
-</div>
-
-
+  <div class="">
+    <form>
+      <label for="">Pronoun</label>
+      <input type="text" v-model="pronoun" />
+      <label for="">Name</label>
+      <input type="text" v-model="name" />
+      <label for="">Email</label>
+      <input type="text" v-model="email" />
+      <label for="">Phone number</label>
+      <input type="number" v-model="phonenumber" />
+      <label for="">Password</label>
+      <input type="password" v-model="Password"/>
+      <label for="">Confirm password</label>
+      <input type="password" v-model="confirmPassword" />
+      <input type="submit" @click.prevent="registerForm" />
+    </form>
+  </div>
 </template>
 <style>
 form {
@@ -35,7 +50,7 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="tel"] {
+input[type="number"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -66,4 +81,5 @@ input[type="submit"]:hover {
 }
 </style>
 <script setup>
-import FootComponent from "../components/FootComponent.vue";</script>
+import FootComponent from "../components/FootComponent.vue";
+</script>

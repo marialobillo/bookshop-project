@@ -34,15 +34,20 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  flex-wrap: wrap;
   margin-top: 20%;
+  margin-right: 20%;
   margin-bottom: 0%;
   background-color: #333;
   color: white;
+  column-gap: 20px;
+  overflow: hidden;
   padding: 20px;
 }
 footer {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  padding: 1em;
+  bottom: 20;
 
 }
 

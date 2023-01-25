@@ -1,5 +1,4 @@
 <script setup>
-import WelcomeItem from "../components/WelcomeItem.vue";
 import FooterCommponent from "../components/FooterCommponent.vue";
 import BestSellingauthor from "./BestSellingauthor.vue";
 import BestSellingbook from "./BestSellingbook.vue";

@@ -12,7 +12,7 @@ export default {
   methods: {
     submitForm() {
       // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.name} for your message!`);
+      alert(`Thank you ${this.name} of email ${this.email}  for your message! ${this.message} `);
     },
   },
 };

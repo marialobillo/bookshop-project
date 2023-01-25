@@ -1,19 +1,44 @@
 <!-- eslint-disable prettier/prettier -->
-
+<script >
+import FootComponent from "../components/FootComponent.vue";
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    loginForm() {
+      // Send the form data to the server or display a thank you message
+      alert(`Thank you ${this.email} login message`);
+    },
+    someFunction(){
+         // Send the form data to the server or display a thank you message
+         alert(`Forgot your Password again`);
+    }
+  },
+};
+</script>
 <template>
-<div class="login-container">
+  <div class="login-container">
     <form>
-        <div class="username"><label for="username">Email</label></div>
-        <div class=""><input type="text" placeholder="username" class=""></div>
-        <div class="password"><label for="password">password</label></div>
-        <div class=""><input type="password" placeholder="password" class=""></div>
-        
-        <div class=""><input type="submit"></div>
-        <p><a href="">forgot password</a></p>
-        <p class="error-message"></p>
+      <div class="username"><label for="username">Email</label></div>
+      <div class=""><input type="text" placeholder="username" class="" /></div>
+      <div class="password"><label for="password">password</label></div>
+      <div class="">
+        <input type="password" placeholder="password" class="" />
+      </div>
+
+      <div class="">
+        <input type="submit" @click.prevent="loginForm" />
+      </div>
+
+      <p><a href="" @click.prevent="someFunction" >forgot password</a></p>
+      <p class="error-message"></p>
     </form>
-</div>
-<FootComponent />
+  </div>
+  <FootComponent />
 </template>
 <style scoped>
 /* Use a grid-based layout */
@@ -124,5 +149,3 @@ label[for="password"] {
   font-size: 14px;
 }
 </style>
-<script setup>
-import FootComponent from "../components/FootComponent.vue";</script>
