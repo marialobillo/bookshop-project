@@ -1,7 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 
 <template>
-
+  <div class="publishers">
   <div class="">
     <section>
       <SearchbarComponent />
@@ -12,23 +12,35 @@
     <ul>
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
-    <button @click="toggleSlideshow">Toggle Slideshow</button>
+    <div class="">
+      <button @click="toggleSlideshow">Prev</button>&nbsp;
+      <button @click="toggleSlideshow">Next</button>
+    </div>
   </div>
   <P>most popular publishers</P>
   <div>
     <ul>
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
-    <button @click="toggleSlideshow">Toggle Slideshow</button>
-  </div>
+    <div class="">
+      <button @click="toggleSlideshow">Prev</button>&nbsp;
+      <button @click="toggleSlideshow">Next</button>
+    </div>
+   
+     </div>
+    </div>
   <FooterCommponent />
 </template>
 <script setup>
 import FooterCommponent from "../components/FooterCommponent.vue";
 import SearchbarComponent from "../components/SearchbarComponent.vue";
 </script>
-<style scoped>
-p{
-  margin-top: 20%;
-  margin-bottom: 20%;
-}</style>
+<style>
+button {
+  background-color: blueviolet;
+  border-radius: 15%;
+}
+.publishers {
+  margin-bottom: 5%;
+}
+</style>

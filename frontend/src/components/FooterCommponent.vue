@@ -4,26 +4,26 @@
 <div class="">
     <ul>
         <li>Pages</li>
-        <li>about</li>
-        <li>terms & condition</li>
+        <li>About</li>
+        <li>Terms & Condition</li>
         <li>FAQ</li>
-        <li>contact</li>
+        <li>Contact</li>
     </ul>
 </div>
 <div class="">
     <ul>
-    <li>top categories</li>
-    <li>university</li>
-    <li>secondary</li>
-    <li>primary</li>
-    <li>top reads</li>
+    <li>Top categories</li>
+    <li>University</li>
+    <li>Secondary</li>
+    <li>Primary</li>
+    <li>Top reads</li>
 </ul>
 </div>
 <div class="">
     <ul>
-        <li>where to find us</li>
+        <li>Where to find us</li>
         <li>9696 princess st</li>
-        <li>brookly,NY,11296</li>
+        <li>Brookly,NY,11296</li>
     </ul>
 </div>
 </footer>
