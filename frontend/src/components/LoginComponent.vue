@@ -34,7 +34,7 @@ export default {
         <input type="submit" @click.prevent="loginForm" />
       </div>
 
-      <p><a href="" @click.prevent="someFunction" >forgot password</a></p>
+      <p><a href="" @click.prevent="someFunction">forgot password</a></p>
       <p class="error-message"></p>
     </form>
   </div>
