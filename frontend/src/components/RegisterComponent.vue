@@ -1,39 +1,25 @@
 <!-- eslint-disable prettier/prettier -->
-<script>
-export default {
-  data() {
-    return {
-      pronoun:"",
-      name: "",
-      email: "",
-      phonenumber: "",
-      Password: "",
-      confirmPassword: "",
-    };
-  },
-  methods: {
-    registerForm() {
-      // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.name}, your details ${this.pronoun} ${this.name}${this.email} ${this.phonenumber} ${this.Password} ${this.confirmPassword} has been registered successfully !`);
-    },
-  },
-};</script>
+<script setup>
+import FootComponent from "../components/FootComponent.vue";
+import { useRegisterStore } from "../../store/register";
+const RegisterStore = useRegisterStore();
+</script>
 <template>
   <div class="">
     <form>
       <label for="">Pronoun</label>
-      <input type="text" v-model="pronoun" />
+      <input type="text" v-model="RegisterStore.Pronoun" />
       <label for="">Name</label>
-      <input type="text" v-model="name" />
+      <input type="text" v-model="RegisterStore.Name" />
       <label for="">Email</label>
-      <input type="text" v-model="email" />
+      <input type="text" v-model="RegisterStore.Email" />
       <label for="">Phone number</label>
-      <input type="number" v-model="phonenumber" />
+      <input type="text" v-model="RegisterStore.Phonenumber" />
       <label for="">Password</label>
-      <input type="password" v-model="Password"/>
+      <input type="password" v-model="RegisterStore.password"/>
       <label for="">Confirm password</label>
-      <input type="password" v-model="confirmPassword" />
-      <input type="submit" @click.prevent="registerForm" />
+      <input type="password" v-model="RegisterStore.ConfirmPassword" />
+      <input type="submit" @click.prevent="RegisterStore.registerForm" />
     </form>
   </div>
 </template>
@@ -80,6 +66,4 @@ input[type="submit"]:hover {
   }
 }
 </style>
-<script setup>
-import FootComponent from "../components/FootComponent.vue";
-</script>
+

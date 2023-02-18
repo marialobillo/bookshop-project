@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import FooterCommponent from "./components/FooterCommponent.vue";
 </script>
 
 <template>
@@ -27,9 +28,10 @@ import { RouterLink, RouterView } from "vue-router";
     </div>
   </header>
   <RouterView />
+  <FooterCommponent />
 </template>
 
-<style scoped>
+<style>
 header {
   line-height: 1.5;
   max-height: 100vh;

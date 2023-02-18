@@ -1,13 +1,13 @@
-import { createPinia } from 'pinia'
+import { createPinia } from "pinia";
 
 export const useCounterStore = createPinia({
-  id: 'counter',
+  id: "counter",
   state: () => ({
-    count: 0
+    count: 0,
   }),
   actions: {
     increment(state) {
-      state.count++
-    }
-  }
-})
+      state.count++;
+    },
+  },
+});

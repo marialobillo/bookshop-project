@@ -8,11 +8,13 @@ import "bootstrap";
 import "popper.js";
 import "./assets/main.css";
 
+const Pinia =  createPinia ();
 const app = createApp(App);
 
 app.use(router);
+app.use(Pinia)
 app.use(
-    createPinia({
+  createPinia({
     modules: {
       counter: useCounterStore,
     },

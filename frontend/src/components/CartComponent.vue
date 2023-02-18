@@ -1,22 +1,11 @@
 <!-- eslint-disable prettier/prettier -->
 
-<script>
-import FooterCommponent from "../components/FooterCommponent.vue";
-export default {
-  data() {
-    return {
-      email: "",
-      password: "",
-    };
-  },
-  methods: {
-    purchaseForm() {
-      // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.email} purchase message`);
-    },
-   
-  },
-};
+<script setup>
+import { useCartStore } from "/store/cart.js";
+
+const Cartstore = useCartStore();
+//console.log(Cartstore.VAT);
+
 </script>
 <template>
   <h3>Cart</h3>
@@ -32,18 +21,15 @@ export default {
       <button @click="removeItem(item)">Remove</button>
     </li>
   </ul>
-
   <div class="">
-    <p>TOTAL:{{ total }}<br /></p>
-    TOTAL VAT:{{ total - vat }}<br />
-    TOTAL DEDUCTION:<br />
-    <button @click.prevent="purchaseForm">Checkout</button>
+    <p>TOTAL: {{ Cartstore.Total }} <br /></p>
+    TOTAL VAT: {{ Cartstore.VAT }}<br />
+    TOTAL DEDUCTION: {{ Cartstore.Deduction }}<br />
+    <button @click.prevent="Cartstore.purchaseForm">Checkout</button>
   </div>
-
-  <FooterCommponent />
 </template>
 <style>
-button{
+button {
   color: rgb(26, 24, 27);
   background-color: blue;
 }

@@ -13,8 +13,8 @@
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
     <div class="">
-      <button @click="toggleSlideshow">Prev</button>&nbsp;
-      <button @click="toggleSlideshow">Next</button>
+      <button @click="Publisherstore.addForm">Prev</button>&nbsp;
+      <button @click="Publisherstore.someFunction">Next</button>
     </div>
   </div>
   <P>most popular publishers</P>
@@ -23,8 +23,8 @@
       <li v-for="item in items" :key="item.id">{{ item.name }}</li>
     </ul>
     <div class="">
-      <button @click="toggleSlideshow">Prev</button>&nbsp;
-      <button @click="toggleSlideshow">Next</button>
+      <button @click="Publisherstore.addForm">Prev</button>&nbsp;
+      <button @click="Publisherstore.someFunction">Next</button>
     </div>
    
      </div>
@@ -34,6 +34,8 @@
 <script setup>
 import FooterCommponent from "../components/FooterCommponent.vue";
 import SearchbarComponent from "../components/SearchbarComponent.vue";
+import { usePublisherStore } from "../../store/publishers";
+const Publisherstore = usePublisherStore();
 </script>
 <style>
 button {
