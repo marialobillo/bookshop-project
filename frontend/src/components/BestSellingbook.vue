@@ -3,13 +3,16 @@ import { useBestsellerBooksStore } from "../../store/bestsellingbooks.js";
 import { useBooksStore } from "../../store/post";
 const polo = useBestsellerBooksStore();
 const bestseller = useBooksStore();
-console.log(bestseller.books)
+console.log(bestseller.books);
 </script>
 <template>
   ||best selling books||
   <div>
     <ul>
-      <li v-for="item in items" :key="item.id">{{ bestseller.books }}</li>
+      <li v-for="item in bestseller.books" :key="item.id">
+        {{ bestseller.books }}
+        <button>BUY</button>
+      </li>
     </ul>
     <div class="">
       <P>{{ bestseller.books }}</P>

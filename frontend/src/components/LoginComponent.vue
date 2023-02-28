@@ -1,7 +1,6 @@
 <!-- eslint-disable prettier/prettier -->
 <script setup>
 import FootComponent from "../components/FootComponent.vue";
-import AuthorComponent from "./AuthorComponent.vue";
 import { useLoginStore } from "../../store/login";
 const LoginStore = useLoginStore();
 </script>
@@ -10,11 +9,21 @@ const LoginStore = useLoginStore();
     <form>
       <div class="username"><label for="username">Email</label></div>
       <div class="">
-        <input type="text" placeholder="username" class="" v-model="LoginStore.Email" />
+        <input
+          type="text"
+          placeholder="username"
+          class=""
+          v-model="LoginStore.Email"
+        />
       </div>
       <div class="password"><label for="password">password</label></div>
       <div class="">
-        <input type="password" placeholder="password" class=""  v-model="LoginStore.Password"/>
+        <input
+          type="password"
+          placeholder="password"
+          class=""
+          v-model="LoginStore.Password"
+        />
       </div>
 
       <div class="">

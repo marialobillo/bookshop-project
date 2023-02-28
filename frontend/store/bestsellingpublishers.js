@@ -1,11 +1,7 @@
 import { defineStore } from "pinia";
-//import { useBooksStore } from "./post";
-//const Books = useBooksStore();
-
 export const useBestsellerpublishersStore = defineStore("Bestsellerpub", {
   state: () => ({
     items: [],
-    books: [],
   }),
   actions: {
     addForm() {

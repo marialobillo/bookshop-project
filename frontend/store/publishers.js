@@ -4,8 +4,7 @@ const Books = useBooksStore();
 
 export const usePublisherStore = defineStore("Publisher", {
   state: () => ({
-    items: [],
-    books: [],
+    items: "",
   }),
   actions: {
     addForm() {

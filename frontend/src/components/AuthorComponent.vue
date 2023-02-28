@@ -4,8 +4,9 @@ import FooterCommponent from "../components/FooterCommponent.vue";
 import SearchbarComponent from "../components/SearchbarComponent.vue";
 import CounterComponent from "./CounterComponent.vue";
 import { useAuthorStore } from "../../store/authors"; 
+import { useBooksStore } from "../../store/post";
 const AuthorStore = useAuthorStore();
-
+const Books = useBooksStore();
 
 </script>
 <template>
@@ -19,21 +20,22 @@ const AuthorStore = useAuthorStore();
     <p>||best selling authors||</p>
     <div class="">
       <ul>
-        <li v-for="item in items" :key="item.id">
-          {{ AuthorStore.books }}
+        <li v-for="item in Books.books" :key="item.id">
+          {{ Books.books }}
+          <button>BUY</button>
         </li>
       </ul>
       <div class="">
         <button @click="AuthorStore.addForm">Prev</button>&nbsp;
-        <button @click="AuthorStore.someFunction">Next
-          
-        </button>
+        <button @click="AuthorStore.someFunction">Next</button>
       </div>
     </div>
     <P>||most popular authors|||</P>
     <div class="author">
       <ul>
-        <li v-for="item in items" :key="item.id">{{ AuthorStore.books }}</li>
+        <li v-for="item in Books.books" :key="item.id">
+          {{ Books.books }}<button>BUY</button>
+        </li>
       </ul>
       <div class="">
         <button @click="AuthorStore.addForm">Prev</button>&nbsp;

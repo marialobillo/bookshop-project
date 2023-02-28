@@ -1,11 +1,10 @@
 // store/auth.js
 //where all the books will be
-//filter bar collects here.
 
 import { defineStore } from "pinia";
 export const useBooksStore = defineStore("books", {
   state: () => ({
-    items: [],
+    items: "",
     books: ["kifo mauti", "lisilobidi", "penzi la mama", "uwa na waridi"],
   }),
   actions: {
