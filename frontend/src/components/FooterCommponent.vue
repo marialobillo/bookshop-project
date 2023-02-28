@@ -28,15 +28,15 @@
 </div>
 </footer>
 </template>
-<style scoped>
+<style>
 footer {
   display: flex;
   justify-content: space-between;
+  position: absolute;
   align-items: flex-start;
   width: 100%;
-  flex-wrap: wrap;
-  margin-top: 20%;
-  margin-right: 20%;
+  margin-top: 50%;
+  padding: 1em;
   margin-bottom: 0%;
   background-color: #333;
   color: white;
@@ -44,13 +44,6 @@ footer {
   overflow: hidden;
   padding: 20px;
 }
-footer {
-  position: absolute;
-  padding: 1em;
-  bottom: 20;
-
-}
-
 footer ul {
   list-style: none;
   margin: 0;
