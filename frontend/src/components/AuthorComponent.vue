@@ -2,27 +2,27 @@
 <script setup>
 import FooterCommponent from "../components/FooterCommponent.vue";
 import SearchbarComponent from "../components/SearchbarComponent.vue";
-import CounterComponent from "./CounterComponent.vue";
 import { useAuthorStore } from "../../store/authors"; 
 import { useBooksStore } from "../../store/post";
+import { usePublisherStore } from "../../store/publishers"; 
+//import{usePurchasedItem} from "../../store/purchaseditem"
 const AuthorStore = useAuthorStore();
 const Books = useBooksStore();
-
+const Publisherstore = usePublisherStore();
 </script>
 <template>
   <div class="author">
     <div class="">
       <section>
         <SearchbarComponent />
-        <CounterComponent />
       </section>
     </div>
     <p>||best selling authors||</p>
     <div class="">
       <ul>
         <li v-for="item in Books.books" :key="item.id">
-          {{ Books.books }}
-          <button>BUY</button>
+          {{ item.name }}
+          <button @click="Publisherstore.sumeFunction(item.name)">BUY</button>
         </li>
       </ul>
       <div class="">
@@ -34,7 +34,8 @@ const Books = useBooksStore();
     <div class="author">
       <ul>
         <li v-for="item in Books.books" :key="item.id">
-          {{ Books.books }}<button>BUY</button>
+          {{ item.name
+          }}<button @click="Publisherstore.sumeFunction(item.name)">BUY</button>
         </li>
       </ul>
       <div class="">

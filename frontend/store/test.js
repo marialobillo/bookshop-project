@@ -3,7 +3,12 @@ import axios from "axios";
 
 export const useTestStore = defineStore("test", {
   state: () => ({
-    users: [],
+    users: [
+      { id: 1, name: "Jane" },
+      { id: 2, name: "linda" },
+      { id: 3, name: "Mary" },
+      { id: 4, name: "Winnie" },
+    ],
   }),
   actions: {
     searchForm() {

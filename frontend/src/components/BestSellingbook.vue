@@ -1,8 +1,11 @@
 <script setup>
 import { useBestsellerBooksStore } from "../../store/bestsellingbooks.js";
 import { useBooksStore } from "../../store/post";
+import { usePublisherStore } from "../../store/publishers";
 const polo = useBestsellerBooksStore();
 const bestseller = useBooksStore();
+
+const pub = usePublisherStore();
 console.log(bestseller.books);
 </script>
 <template>
@@ -10,8 +13,8 @@ console.log(bestseller.books);
   <div>
     <ul>
       <li v-for="item in bestseller.books" :key="item.id">
-        {{ bestseller.books }}
-        <button>BUY</button>
+        {{ item.name }}
+        <button @click="pub.sumeFunction(item.name)">BUY</button>
       </li>
     </ul>
     <div class="">

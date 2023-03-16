@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import FooterCommponent from "./components/FooterCommponent.vue";
-
+const paul = !true;
 </script>
 
 <template>
@@ -15,13 +15,13 @@ import FooterCommponent from "./components/FooterCommponent.vue";
     />
 
     <div class="wrapper">
-      <div v-if="0 === 0" class="upper">
+      <div v-if="paul == true" class="upper">
         <RouterLink to="/LoginComponent">Login</RouterLink> &nbsp;
         <RouterLink to="/RegisterComponent">Register</RouterLink>
       </div>
-      <div class="upper">
+      <div v-else class="upper">
         <RouterLink to="/LoginComponent">Logout</RouterLink> &nbsp;
-        <RouterLnk to="/RegisterComponent">Name</RouterLnk>
+        <p>Name</p>
       </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>

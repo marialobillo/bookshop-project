@@ -2,17 +2,14 @@ import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
   state: () => ({
-    id: null,
-    name: null,
-    email: null,
+    users: [
+      { id: 1, name: "Jane" },
+      { id: 2, name: "linda" },
+      { id: 3, name: "Mary" },
+      { id: 4, name: "Winnie" },
+    ]
   }),
 
-  getters: {
-    getUserId: (state) => state.id,
-    getUserName: (state) => state.name,
-    getUserEmail: (state) => state.email,
-    isLoggedIn: (state) => !!state.id,
-  },
 
   actions: {
     async login(email, password) {

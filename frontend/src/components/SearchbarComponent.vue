@@ -21,10 +21,14 @@ const searchstored = useSearchStore();
         </div>
       </div>
     </form>
+    <P class="searchresult">{{ searchstored.search }} </P>
   </div>
 </template>
 <style>
 form {
   margin-top: 3%;
+}
+.searchresult{
+  color: yellow;
 }
 </style>

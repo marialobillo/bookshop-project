@@ -22,19 +22,5 @@ a,
 }
 
 @media (min-width: 1024px) {
-  body {
-    background-color: #262b30;
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-  footer{
-    margin-bottom: 0%;
-    width:100%;
-  }
+ 
 }

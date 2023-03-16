@@ -2,8 +2,13 @@
 
 <script setup>
 import { useCartStore } from "/store/cart.js";
+import { usePublisherStore } from "../../store/publishers";
+import { usePurchasedItem } from "../../store/purchaseditem";
+import CounterComponent from "./CounterComponent.vue";
 
+const publishers = usePublisherStore();
 const Cartstore = useCartStore();
+const purchaseditem = usePurchasedItem();
 //console.log(Cartstore.VAT);
 
 </script>
@@ -15,10 +20,34 @@ const Cartstore = useCartStore();
     <div class="">cart logo</div>
     <hr />
   </div>
+  <CounterComponent />
+  <P>{{ publishers.doublecount }}</P>
+  <ul>
+    <li v-for="item in publishers.product" :key="item.id">
+      {{ item.name }} {{ item.id }}{{ item }}
+
+      <button @click="publishers.removeItem(item)">Remove</button
+      ><CounterComponent />
+    </li>
+  </ul>
+  <P>purchased item</P>
+  <ul>
+    <li v-for="item in purchaseditem.Purchase" :key="item.id">
+      {{ item.id }}
+      <button @click="publishers.removeItem(item.id)">Remove</button
+      ><CounterComponent />
+    </li>
+  </ul>
   <ul>
     <li v-for="item in items" :key="item.id">
       {{ item.name }} - {{ item.price }}
       <button @click="removeItem(item)">Remove</button>
+    </li>
+  </ul>
+  <ul>
+    <li v-for="(item, index) in cartItems" :key="index">
+      {{ item.name }} - {{ item.quantity }} x {{ item.price }} =
+      {{ item.total }}
     </li>
   </ul>
   <div class="">
