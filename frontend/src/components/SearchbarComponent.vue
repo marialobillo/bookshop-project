@@ -1,8 +1,6 @@
-<!-- eslint-disable prettier/prettier -->
 <script setup>
-import { useSearchStore } from '../../store/search';
+import { useSearchStore } from "../../store/search";
 const searchstored = useSearchStore();
-
 </script>
 <template>
   <div>
@@ -28,7 +26,7 @@ const searchstored = useSearchStore();
 form {
   margin-top: 3%;
 }
-.searchresult{
+.searchresult {
   color: yellow;
 }
 </style>

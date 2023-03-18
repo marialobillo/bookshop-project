@@ -1,32 +1,31 @@
-<!-- eslint-disable prettier/prettier -->
 <template>
-<footer>
-<div class="">
-    <ul>
+  <footer>
+    <div class="">
+      <ul>
         <li>Pages</li>
         <li>About</li>
         <li>Terms & Condition</li>
         <li>FAQ</li>
         <li>Contact</li>
-    </ul>
-</div>
-<div class="">
-    <ul>
-    <li>Top categories</li>
-    <li>University</li>
-    <li>Secondary</li>
-    <li>Primary</li>
-    <li>Top reads</li>
-</ul>
-</div>
-<div class="">
-    <ul>
+      </ul>
+    </div>
+    <div class="">
+      <ul>
+        <li>Top categories</li>
+        <li>University</li>
+        <li>Secondary</li>
+        <li>Primary</li>
+        <li>Top reads</li>
+      </ul>
+    </div>
+    <div class="">
+      <ul>
         <li>Where to find us</li>
         <li>9696 princess st</li>
         <li>Brookly,NY,11296</li>
-    </ul>
-</div>
-</footer>
+      </ul>
+    </div>
+  </footer>
 </template>
 <style>
 footer {

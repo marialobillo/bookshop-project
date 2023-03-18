@@ -6,11 +6,7 @@ import { defineStore } from "pinia";
 
 export const usePublisherStore = defineStore("Publisher", {
   state: () => ({
-    product: [
-      { id: 1, name: "Jane" },
-      { id: 2, name: "linda" },
-      { id: 3, name: "Mary" },
-    ],
+    product: [],
   }),
   actions: {
     addForm() {

@@ -5,7 +5,7 @@ import SearchbarComponent from "../components/SearchbarComponent.vue";
 import { useAuthorStore } from "../../store/authors"; 
 import { useBooksStore } from "../../store/post";
 import { usePublisherStore } from "../../store/publishers"; 
-//import{usePurchasedItem} from "../../store/purchaseditem"
+
 const AuthorStore = useAuthorStore();
 const Books = useBooksStore();
 const Publisherstore = usePublisherStore();

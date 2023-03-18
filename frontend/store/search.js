@@ -1,14 +1,14 @@
 import { defineStore } from "pinia";
 export const useSearchStore = defineStore("search", {
   state: () => ({
-    books:[
+    books: [
       { id: 1, name: "kifo mauti" },
       { id: 2, name: "lisilobidi" },
       { id: 3, name: "penzi la mama" },
       { id: 4, name: "uwa na waridi" },
     ],
     search: "",
-    result:"",
+    result: "",
   }),
   actions: {
     searchForm() {
@@ -18,12 +18,11 @@ export const useSearchStore = defineStore("search", {
       //this.result = this.books.find(this.search)
       //console.log(this.books.find(this.search));
     },
-    showSearch(){
-      if(this.search.length()=1)
-      {
+    showSearch() {
+      if (this.search.length() == 1) {
         return true;
       }
-    }
+    },
   },
   mutations: {
     addPost(state, post) {

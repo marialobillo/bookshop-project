@@ -1,5 +1,3 @@
-<!-- eslint-disable prettier/prettier -->
-
 <script setup>
 import { useCartStore } from "/store/cart.js";
 import { usePublisherStore } from "../../store/publishers";
@@ -9,8 +7,6 @@ import CounterComponent from "./CounterComponent.vue";
 const publishers = usePublisherStore();
 const Cartstore = useCartStore();
 const purchaseditem = usePurchasedItem();
-//console.log(Cartstore.VAT);
-
 </script>
 <template>
   <h3>Cart</h3>
@@ -20,7 +16,6 @@ const purchaseditem = usePurchasedItem();
     <div class="">cart logo</div>
     <hr />
   </div>
-  <CounterComponent />
   <P>{{ publishers.doublecount }}</P>
   <ul>
     <li v-for="item in publishers.product" :key="item.id">
@@ -30,7 +25,7 @@ const purchaseditem = usePurchasedItem();
       ><CounterComponent />
     </li>
   </ul>
-  <P>purchased item</P>
+
   <ul>
     <li v-for="item in purchaseditem.Purchase" :key="item.id">
       {{ item.id }}

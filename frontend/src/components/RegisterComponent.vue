@@ -1,4 +1,3 @@
-<!-- eslint-disable prettier/prettier -->
 <script setup>
 import FootComponent from "../components/FootComponent.vue";
 import { useRegisterStore } from "../../store/register";
@@ -16,7 +15,7 @@ const RegisterStore = useRegisterStore();
       <label for="">Phone number</label>
       <input type="text" v-model="RegisterStore.Phonenumber" />
       <label for="">Password</label>
-      <input type="password" v-model="RegisterStore.password"/>
+      <input type="password" v-model="RegisterStore.password" />
       <label for="">Confirm password</label>
       <input type="password" v-model="RegisterStore.ConfirmPassword" />
       <input type="submit" @click.prevent="RegisterStore.registerForm" />
@@ -66,4 +65,3 @@ input[type="submit"]:hover {
   }
 }
 </style>
-

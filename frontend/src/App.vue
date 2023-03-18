@@ -15,7 +15,7 @@ const paul = !true;
     />
 
     <div class="wrapper">
-      <div v-if="paul == true" class="upper">
+      <div v-if="paul == false" class="upper">
         <RouterLink to="/LoginComponent">Login</RouterLink> &nbsp;
         <RouterLink to="/RegisterComponent">Register</RouterLink>
       </div>

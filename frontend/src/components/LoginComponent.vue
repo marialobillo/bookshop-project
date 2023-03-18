@@ -1,4 +1,3 @@
-<!-- eslint-disable prettier/prettier -->
 <script setup>
 import FootComponent from "../components/FootComponent.vue";
 import { useLoginStore } from "../../store/login";

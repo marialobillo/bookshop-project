@@ -1,10 +1,20 @@
+<script setup>
+import AddProduct from "./AddProduct.vue";
+import AddUser from "./AddUser.vue";
+import CommentsFeedback from "./CommentsFeedback.vue";
+import DeleteProduct from "./DeleteProduct.vue";
+import DeleteUser from "./DeleteUser.vue";
+import UserDetails from "./UserDetails.vue";
+import PurchaseDetails from "./PurchaseDetails.vue";
+</script>
 <template>
-  <p>this is the content management centre</p>
-  <P>1.user_details,2.logged-in, 3.click count,registered</P>
-  <P>comments/feedback</P>
-  <p>add user</p>
-  <p>add product</p>
-  <p>delete user</p>
-  <p>delete product</p>
-  <p>others</p>
+  <p>this is the content management centre(CMC)</p>
+  <p>others/graph</p>
+  <UserDetails />
+  <CommentsFeedback />
+  <AddUser />
+  <AddProduct />
+  <DeleteProduct />
+  <DeleteUser />
+  <PurchaseDetails />
 </template>

@@ -20,3 +20,8 @@ const barcelona = useBooksStore();
     </div>
   </div>
 </template>
+<style>
+ul {
+  list-style: none;
+}
+</style>
