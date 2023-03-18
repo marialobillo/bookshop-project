@@ -1,22 +1,12 @@
-<!-- eslint-disable prettier/prettier -->
+<script setup>
+import { useCartStore } from "/store/cart.js";
+import { usePublisherStore } from "../../store/publishers";
+import { usePurchasedItem } from "../../store/purchaseditem";
+import CounterComponent from "./CounterComponent.vue";
 
-<script>
-import FooterCommponent from "../components/FooterCommponent.vue";
-export default {
-  data() {
-    return {
-      email: "",
-      password: "",
-    };
-  },
-  methods: {
-    purchaseForm() {
-      // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.email} purchase message`);
-    },
-   
-  },
-};
+const publishers = usePublisherStore();
+const Cartstore = useCartStore();
+const purchaseditem = usePurchasedItem();
 </script>
 <template>
   <h3>Cart</h3>
@@ -26,24 +16,44 @@ export default {
     <div class="">cart logo</div>
     <hr />
   </div>
+  <P>{{ publishers.doublecount }}</P>
+  <ul>
+    <li v-for="item in publishers.product" :key="item.id">
+      {{ item.name }} {{ item.id }}{{ item }}
+
+      <button @click="publishers.removeItem(item)">Remove</button
+      ><CounterComponent />
+    </li>
+  </ul>
+
+  <ul>
+    <li v-for="item in purchaseditem.Purchase" :key="item.id">
+      {{ item.id }}
+      <button @click="publishers.removeItem(item.id)">Remove</button
+      ><CounterComponent />
+    </li>
+  </ul>
   <ul>
     <li v-for="item in items" :key="item.id">
       {{ item.name }} - {{ item.price }}
       <button @click="removeItem(item)">Remove</button>
     </li>
   </ul>
-
+  <ul>
+    <li v-for="(item, index) in cartItems" :key="index">
+      {{ item.name }} - {{ item.quantity }} x {{ item.price }} =
+      {{ item.total }}
+    </li>
+  </ul>
   <div class="">
-    <p>TOTAL:{{ total }}<br /></p>
-    TOTAL VAT:{{ total - vat }}<br />
-    TOTAL DEDUCTION:<br />
-    <button @click.prevent="purchaseForm">Checkout</button>
+    <p>TOTAL: {{ Cartstore.Total }} <br /></p>
+    TOTAL VAT: {{ Cartstore.VAT }}<br />
+    TOTAL DEDUCTION: {{ Cartstore.Deduction }}<br />
+    <button @click.prevent="Cartstore.purchaseForm">Checkout</button>
   </div>
-
-  <FooterCommponent />
 </template>
 <style>
-button{
+button {
   color: rgb(26, 24, 27);
   background-color: blue;
 }

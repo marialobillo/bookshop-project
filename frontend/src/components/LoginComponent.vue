@@ -1,40 +1,37 @@
-<!-- eslint-disable prettier/prettier -->
-<script >
+<script setup>
 import FootComponent from "../components/FootComponent.vue";
-export default {
-  data() {
-    return {
-      email: "",
-      password: "",
-    };
-  },
-  methods: {
-    loginForm() {
-      // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.email} login message`);
-    },
-    someFunction(){
-         // Send the form data to the server or display a thank you message
-         alert(`Forgot your Password again`);
-    }
-  },
-};
+import { useLoginStore } from "../../store/login";
+const LoginStore = useLoginStore();
 </script>
 <template>
   <div class="login-container">
     <form>
       <div class="username"><label for="username">Email</label></div>
-      <div class=""><input type="text" placeholder="username" class="" /></div>
+      <div class="">
+        <input
+          type="text"
+          placeholder="username"
+          class=""
+          v-model="LoginStore.Email"
+        />
+      </div>
       <div class="password"><label for="password">password</label></div>
       <div class="">
-        <input type="password" placeholder="password" class="" />
+        <input
+          type="password"
+          placeholder="password"
+          class=""
+          v-model="LoginStore.Password"
+        />
       </div>
 
       <div class="">
-        <input type="submit" @click.prevent="loginForm" />
+        <input type="submit" @click.prevent="LoginStore.loginForm" />
       </div>
 
-      <p><a href="" @click.prevent="someFunction">forgot password</a></p>
+      <p>
+        <a href="" @click.prevent="LoginStore.someFunction">forgot password</a>
+      </p>
       <p class="error-message"></p>
     </form>
   </div>
