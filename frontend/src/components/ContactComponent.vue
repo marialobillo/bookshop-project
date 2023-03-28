@@ -25,6 +25,7 @@ form {
   width: 60%;
   margin: 0 auto;
 }
+
 /* Style the form elements */
 form input[type="name"],
 form input[type="email"] {
@@ -48,7 +49,8 @@ form input[type="submit"] {
   background-color: #0095d9;
   cursor: pointer;
 }
-/*style text area*/
+
+/* Style the text area */
 textarea {
   width: 100%;
   height: 174px;
@@ -56,6 +58,7 @@ textarea {
   border-radius: 5%;
   font-size: large;
 }
+
 /* Style the error message */
 form .error-message {
   margin: 0;
@@ -63,6 +66,7 @@ form .error-message {
   color: red;
   font-size: 14px;
 }
+
 /* Style the button */
 button {
   display: inline-block;
@@ -75,6 +79,7 @@ button {
   background-color: #0095d9;
   cursor: pointer;
 }
+
 /* Style the hover state */
 button:hover {
   background-color: #0075c9;

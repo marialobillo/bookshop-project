@@ -18,5 +18,8 @@ export const usePurchasedItem = defineStore("PurchasedItem", {
       // Use the splice method to remove the item at the given index from the Purchase array
       this.Purchase.splice(index, 1);
     },
+    totalPurchase(itemClicked) {
+      return itemClicked.length;
+    },
   },
 });

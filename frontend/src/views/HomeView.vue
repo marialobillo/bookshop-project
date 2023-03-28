@@ -6,7 +6,7 @@ import TheWelcome from "../components/TheWelcome.vue";
 
 <template>
   <main>
-    <SearchbarComponent />
+  
     <TheWelcome />
     <CounterComponent />
   </main>
