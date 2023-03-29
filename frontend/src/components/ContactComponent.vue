@@ -1,36 +1,20 @@
 <!-- eslint-disable prettier/prettier -->
-<script set>
-import FooterCommponent from "../components/FooterCommponent.vue";
-export default {
-  data() {
-    return {
-      name: "",
-      email: "",
-      message: "",
-    };
-  },
-  methods: {
-    submitForm() {
-      // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.name} of email ${this.email}  for your message! ${this.message} `);
-    },
-  },
-};
+<script setup>
+import { useContactStore } from "/store/Contact.js";
+const Contactstore = useContactStore();
 </script>
-
 <template>
   <div>
     <form>
       <label for="name">Name:</label><br />
-      <input type="name" v-model="name" /><br />
+      <input type="name" v-model="Contactstore.Name" /><br />
       <label for="email">Email:</label><br />
-      <input type="email" v-model="email" /><br />
+      <input type="email" v-model="Contactstore.Email" /><br />
       <label for="message">Message:</label><br />
-      <textarea v-model="message"></textarea>
+      <textarea v-model="Contactstore.Message"></textarea>
       <br />
-      <input type="submit" @click.prevent="submitForm" />
+      <input type="submit" @click.prevent="Contactstore.submitForm" />
     </form>
-    <FooterCommponent />
   </div>
 </template>
 <style>
@@ -65,7 +49,8 @@ form input[type="submit"] {
   background-color: #0095d9;
   cursor: pointer;
 }
-/*style text area*/
+
+/* Style the text area */
 textarea {
   width: 100%;
   height: 174px;
@@ -73,6 +58,7 @@ textarea {
   border-radius: 5%;
   font-size: large;
 }
+
 /* Style the error message */
 form .error-message {
   margin: 0;
@@ -80,6 +66,7 @@ form .error-message {
   color: red;
   font-size: 14px;
 }
+
 /* Style the button */
 button {
   display: inline-block;
@@ -92,6 +79,7 @@ button {
   background-color: #0095d9;
   cursor: pointer;
 }
+
 /* Style the hover state */
 button:hover {
   background-color: #0075c9;

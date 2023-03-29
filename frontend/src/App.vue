@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import FooterCommponent from "./components/FooterCommponent.vue";
+const paul = !true;
 </script>
 
 <template>
@@ -13,9 +15,13 @@ import { RouterLink, RouterView } from "vue-router";
     />
 
     <div class="wrapper">
-      <div class="upper">
+      <div v-if="paul == false" class="upper">
         <RouterLink to="/LoginComponent">Login</RouterLink> &nbsp;
         <RouterLink to="/RegisterComponent">Register</RouterLink>
+      </div>
+      <div v-else class="upper">
+        <RouterLink to="/LoginComponent">Logout</RouterLink> &nbsp;
+        <p>Name</p>
       </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -27,9 +33,11 @@ import { RouterLink, RouterView } from "vue-router";
     </div>
   </header>
   <RouterView />
+  <FooterCommponent />
 </template>
 
-<style scoped>
+<style>
+
 header {
   line-height: 1.5;
   max-height: 100vh;

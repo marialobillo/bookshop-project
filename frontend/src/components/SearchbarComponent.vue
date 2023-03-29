@@ -1,26 +1,14 @@
-<!-- eslint-disable prettier/prettier -->
-<script>
-export default {
-  data() {
-    return {
-      search: "",
-      
-    };
-  },
-  methods: {
-    searchForm() {
-      // Send the form data to the server or display a thank you message
-      alert(`Thank you ${this.search} search message`);
-    },
-  },
-};</script>
+<script setup>
+import { useSearchStore } from "../../store/search";
+const searchstored = useSearchStore();
+</script>
 <template>
   <div>
-    <form @submit.prevent="searchForm">
+    <form @submit.prevent="searchstored.searchForm">
       <div class="input-group">
         <input
           type="text"
-          v-model="search"
+          v-model="searchstored.search"
           placeholder="Search"
           class="form-control"
         />
@@ -31,10 +19,14 @@ export default {
         </div>
       </div>
     </form>
+    <P class="searchresult">{{ searchstored.search }} </P>
   </div>
 </template>
 <style>
 form {
   margin-top: 3%;
+}
+.searchresult {
+  color: yellow;
 }
 </style>
